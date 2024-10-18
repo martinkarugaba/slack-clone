@@ -13,7 +13,7 @@ const AuthScreen = () => {
   return (
     <div className="bg-slack flex h-full items-center justify-center">
       <div className="md-w-[420px] md:h-auto">
-        {state === "signIn" ? <SignInCard /> : <SignUpCard />}
+        {state === "signIn" ? <SignInCard setState={setState} /> : <SignUpCard setState={setState} />}
       </div>
     </div>
   );
