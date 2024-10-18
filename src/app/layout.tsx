@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Slack",
+  title: "Slack clone",
   description: "Real time communication for teams",
 };
 
