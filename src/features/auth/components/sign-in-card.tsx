@@ -53,7 +53,7 @@ export const SignInCard = ({ setState }: SignInCardProps) => {
             Continue
           </Button>
         </form>
-        <Separator />
+        <Separator className="my-8" />
         <div className="flex flex-col gap-y-2.5">
           <Button
             disabled={false}

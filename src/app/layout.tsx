@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { ConvexAuthNextjsServerProvider } from "@convex-dev/auth/nextjs/server";
 
 import "./globals.css";
 import { ConvexClientProvider } from "@/components/convex-client-provider";
@@ -22,9 +23,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased`}>
-        <ConvexClientProvider>{children}</ConvexClientProvider>
-      </body>
+      <ConvexAuthNextjsServerProvider>
+        <body className={`${inter.variable} antialiased`}>
+          <ConvexClientProvider>{children}</ConvexClientProvider>
+        </body>
+      </ConvexAuthNextjsServerProvider>
     </html>
   );
 }
